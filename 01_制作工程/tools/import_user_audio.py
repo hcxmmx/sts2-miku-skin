@@ -20,7 +20,8 @@ def main():
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
         row = {'id': entry['id'], 'path': 'res://Miku_Hcxmmx/Assets/' + destination.relative_to(ASSETS).as_posix(),
-               'duration': entry['duration_seconds']}
+               'duration': entry['duration_seconds'],
+               'playback_gain_db': entry.get('playback_gain_db', 0.0)}
         if entry['role'].startswith('melody_'):
             catalog['melodies'][entry['role'].removeprefix('melody_')] = row
         elif entry['role'] == 'heavy_candidate':

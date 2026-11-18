@@ -29,6 +29,7 @@ internal static class CharacterSelect
                 portrait.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);
                 host.MoveChild(portrait, background.GetIndex() + 1);
                 portrait.Connect("light_clips_changed", Callable.From<bool>(UserAudio.SetLightClipsEnabled));
+                portrait.Connect("clip_mix_changed", Callable.From<float, bool>(UserAudio.SetClipMix));
             }
             if (portrait == null) return;
             var backgrounds = new Godot.Collections.Array<Control> { background };
@@ -38,6 +39,7 @@ internal static class CharacterSelect
             {
                 portrait.Call("set_character_info", model.StartingHp, model.StartingGold, model.StartingRelics[0].Icon);
                 portrait.Call("set_light_clips_enabled", UserAudio.LightClipsEnabled);
+                portrait.Call("set_clip_mix", UserAudio.ClipVolume, UserAudio.ShootingImpactBoost);
             }
             portrait.Call("activate", enabled, backgrounds);
         }

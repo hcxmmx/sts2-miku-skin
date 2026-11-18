@@ -19,6 +19,8 @@ internal static class UserAudio
     private const string ConfigPath = "user://MikuSkin.cfg";
     private const string OwnerMeta = "miku_audio_owner";
     private static bool _lightEnabled = true;
+    internal static float ClipVolume { get; private set; } = 1f;
+    internal static bool ShootingImpactBoost { get; private set; }
 
     internal static void Load()
     {
@@ -26,6 +28,8 @@ internal static class UserAudio
         if (config.Load(ConfigPath) == Error.Ok)
         {
             _lightEnabled = config.GetValue("audio", "light_clips", true).AsBool();
+            ClipVolume = Mathf.Clamp(config.GetValue("audio", "clip_volume", 1f).AsSingle(), 0f, 1f);
+            ShootingImpactBoost = config.GetValue("audio", "shooting_impact_boost", false).AsBool();
         }
     }
 
@@ -45,6 +49,7 @@ internal static class UserAudio
     internal static void Attach(Node2D skin)
     {
         skin.Call("set_light_enabled", _lightEnabled);
+        skin.Call("set_clip_mix", ClipVolume, ShootingImpactBoost);
     }
 
     internal static bool LightClipsEnabled => _lightEnabled;
@@ -55,6 +60,13 @@ internal static class UserAudio
         SaveOptions();
     }
 
+    internal static void SetClipMix(float volume, bool impactBoost)
+    {
+        ClipVolume = Mathf.Clamp(volume, 0f, 1f);
+        ShootingImpactBoost = impactBoost;
+        SaveOptions();
+    }
+
     private static void SaveOptions()
     {
         var config = new ConfigFile();
@@ -62,6 +74,8 @@ internal static class UserAudio
         if (config.HasSectionKey("audio", "battle_music"))
             config.EraseSectionKey("audio", "battle_music");
         config.SetValue("audio", "light_clips", _lightEnabled);
+        config.SetValue("audio", "clip_volume", ClipVolume);
+        config.SetValue("audio", "shooting_impact_boost", ShootingImpactBoost);
         var error = config.Save(ConfigPath);
         if (error != Error.Ok) GD.PushWarning("[MikuSkin] Could not save audio options: " + error);
     }

@@ -15,6 +15,8 @@ var light_group: Dictionary = {}
 var light_index := 0
 var light_clip_id := ""
 var light_gain := 1.0
+var light_clip_gain := 1.0
+var clip_volume := 1.0
 var light_fading := false
 var melody_queue: Array[String] = []
 var active_melody := ""
@@ -67,6 +69,7 @@ func play_light() -> bool:
 		return false
 	light.stream = streams[row.path]
 	light_clip_id = row.id
+	light_clip_gain = db_to_linear(float(row.get("playback_gain_db", 0.0)))
 	light_gain = 1.0
 	light_fading = false
 	_apply_volume()
@@ -157,15 +160,21 @@ func set_mix(sfx: float, bgm: float, muted: bool) -> void:
 	_apply_volume()
 
 
+func set_clip_volume(volume: float) -> void:
+	clip_volume = clampf(volume, 0.0, 1.0)
+	_apply_volume()
+
+
 func _apply_volume() -> void:
 	music.volume_db = linear_to_db(maxf(.0001, music_gain)) + emphasis * float(catalog.get("emphasis_db", 3.0))
 	music.volume_linear = 0.0 if background_muted or music_gain <= 0 else db_to_linear(music.volume_db)
 	for player: AudioStreamPlayer in melodies:
 		player.volume_linear = 0.0 if background_muted else sfx_gain
-	light.volume_linear = 0.0 if background_muted else sfx_gain * light_gain
+	light.volume_linear = 0.0 if background_muted else sfx_gain * clip_volume * light_clip_gain * light_gain
 	if _heavy_playing():
-		heavy.set_meta("mix_gain", heavy_mix)
-		heavy.volume_linear = 0.0 if background_muted else sfx_gain * heavy_mix * db_to_linear(float(heavy.get_meta("cue_gain", 0.0)))
+		var gain := clip_volume * heavy_mix
+		heavy.set_meta("mix_gain", gain)
+		heavy.volume_linear = 0.0 if background_muted else sfx_gain * gain * db_to_linear(float(heavy.get_meta("cue_gain", 0.0)))
 
 
 func finish() -> void:

@@ -75,7 +75,10 @@
         0.266758,
         0.287347
       ],
-      "source_id": "mikumiku_ni_shite_ageru"
+      "source_id": "mikumiku_ni_shite_ageru",
+      "integrated_lufs": -8.2,
+      "true_peak_dbtp": 0.22,
+      "playback_gain_db": -10.8
     },
     {
       "id": "heavy_world_is_mine_001",
@@ -94,7 +97,10 @@
         0.371863,
         0.329967
       ],
-      "source_id": "world_is_mine"
+      "source_id": "world_is_mine",
+      "integrated_lufs": -5.51,
+      "true_peak_dbtp": 0.24,
+      "playback_gain_db": -13.49
     },
     {
       "id": "bgm_empire_girl_001",
@@ -134,7 +140,10 @@
       "channel_rms": [
         0.207306,
         0.204937
-      ]
+      ],
+      "integrated_lufs": -10.9,
+      "true_peak_dbtp": -1.18,
+      "playback_gain_db": -8.1
     },
     {
       "id": "light_bakemono_002",
@@ -155,7 +164,10 @@
       "channel_rms": [
         0.223144,
         0.221156
-      ]
+      ],
+      "integrated_lufs": -10.5,
+      "true_peak_dbtp": -0.84,
+      "playback_gain_db": -8.5
     },
     {
       "id": "light_bakemono_003",
@@ -176,7 +188,10 @@
       "channel_rms": [
         0.208493,
         0.206282
-      ]
+      ],
+      "integrated_lufs": -10.96,
+      "true_peak_dbtp": -1.35,
+      "playback_gain_db": -8.04
     },
     {
       "id": "light_teikoku_001",
@@ -197,7 +212,10 @@
       "channel_rms": [
         0.070775,
         0.074394
-      ]
+      ],
+      "integrated_lufs": -18.43,
+      "true_peak_dbtp": -5.53,
+      "playback_gain_db": -0.57
     },
     {
       "id": "light_teikoku_002",
@@ -218,7 +236,10 @@
       "channel_rms": [
         0.080167,
         0.085275
-      ]
+      ],
+      "integrated_lufs": -18.75,
+      "true_peak_dbtp": -4.73,
+      "playback_gain_db": -0.25
     },
     {
       "id": "light_teikoku_003",
@@ -239,7 +260,10 @@
       "channel_rms": [
         0.208636,
         0.228568
-      ]
+      ],
+      "integrated_lufs": -10.03,
+      "true_peak_dbtp": -1.91,
+      "playback_gain_db": -8.97
     },
     {
       "id": "light_renai_saiban_001",
@@ -260,7 +284,10 @@
       "channel_rms": [
         0.128285,
         0.126291
-      ]
+      ],
+      "integrated_lufs": -13.76,
+      "true_peak_dbtp": -2.33,
+      "playback_gain_db": -5.24
     },
     {
       "id": "light_renai_saiban_002",
@@ -281,7 +308,10 @@
       "channel_rms": [
         0.232051,
         0.236712
-      ]
+      ],
+      "integrated_lufs": -8.42,
+      "true_peak_dbtp": 0.18,
+      "playback_gain_db": -10.58
     },
     {
       "id": "light_renai_saiban_003",
@@ -302,7 +332,10 @@
       "channel_rms": [
         0.342178,
         0.340307
-      ]
+      ],
+      "integrated_lufs": -6.8,
+      "true_peak_dbtp": 0.21,
+      "playback_gain_db": -12.2
     }
   ],
   "sources_document": "../../音频来源与致谢.md"

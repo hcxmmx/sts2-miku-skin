@@ -1,6 +1,7 @@
 extends Control
 
 signal light_clips_changed(enabled: bool)
+signal clip_mix_changed(volume: float, impact_boost: bool)
 
 const PortraitScript = preload("res://Miku_Hcxmmx/Portrait/PortraitActor.gd")
 const BackdropScript = preload("res://Miku_Hcxmmx/Portrait/StageBackdrop.gd")
@@ -24,6 +25,7 @@ func _ready() -> void:
 	panel = InfoPanel.new()
 	add_child(panel)
 	panel.light_clips_changed.connect(func(enabled: bool): light_clips_changed.emit(enabled))
+	panel.clip_mix_changed.connect(func(volume: float, boost: bool): clip_mix_changed.emit(volume, boost))
 	resized.connect(_layout)
 	_layout()
 	hide()
@@ -66,6 +68,10 @@ func set_character_info(hp: int, gold: int, icon: Texture2D) -> void:
 
 func set_light_clips_enabled(enabled: bool) -> void:
 	panel.set_light_clips_enabled(enabled)
+
+
+func set_clip_mix(volume: float, impact_boost: bool) -> void:
+	panel.set_clip_mix(volume, impact_boost)
 
 
 func sample(time: float) -> void:

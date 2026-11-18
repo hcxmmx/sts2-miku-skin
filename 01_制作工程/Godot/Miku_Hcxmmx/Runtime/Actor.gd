@@ -542,6 +542,7 @@ func _play_cue(cue: Dictionary) -> void:
 	var player := AudioStreamPlayer.new()
 	player.stream = audio_streams[path]
 	var gain := linear_to_db(maxf(0.0001, float(cue.volume)))
+	gain += float(cue.get("gain_db_by_path", {}).get(path, 0.0))
 	player.volume_db = (voice_volume_db if kind == "voice" else sfx_volume_db) + gain
 	player.set_meta("kind", kind)
 	player.set_meta("cue_gain", gain)

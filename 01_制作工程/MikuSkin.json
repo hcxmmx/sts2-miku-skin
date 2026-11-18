@@ -3,7 +3,7 @@
   "name": "初音未来 V4 · 愚者外观",
   "author": "Hcxmmx",
   "description": "初音未来 V4 愚者外观，包含动态选人插画、局外待机、常驻音乐舞台、16项动作演出与歌曲片段。",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "min_game_version": "0.113.1",
   "has_pck": true,
   "has_dll": true,

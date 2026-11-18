@@ -1,6 +1,7 @@
 extends Control
 
 signal light_clips_changed(enabled: bool)
+signal clip_mix_changed(volume: float, impact_boost: bool)
 
 const SettingsScript = preload("res://Miku_Hcxmmx/Portrait/StageAudioSettings.gd")
 const WIDTH := 438.0
@@ -56,6 +57,7 @@ func _ready() -> void:
 	_settings.hide()
 	_settings.closed.connect(close_settings.bind(true))
 	_settings.clips_changed.connect(func(enabled: bool): light_clips_changed.emit(enabled))
+	_settings.clip_mix_changed.connect(func(volume: float, boost: bool): clip_mix_changed.emit(volume, boost))
 
 
 func _label(value: String, origin: Vector2, width: float, font_size: int, tint: Color, wrap_height := 0.0) -> Label:
@@ -81,6 +83,10 @@ func set_character_info(hp: int, gold: int, icon: Texture2D) -> void:
 
 func set_light_clips_enabled(enabled: bool) -> void:
 	_settings.set_clips_enabled(enabled)
+
+
+func set_clip_mix(volume: float, impact_boost: bool) -> void:
+	_settings.set_clip_mix(volume, impact_boost)
 
 
 func _open_settings() -> void:

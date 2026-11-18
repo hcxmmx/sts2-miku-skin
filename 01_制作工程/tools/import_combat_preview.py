@@ -145,6 +145,7 @@ def main():
     user_audio = json.loads((ASSETS / 'user_audio.json').read_text(encoding='utf-8'))
     strong_voice = performances['sts2_shootBow']['audio'][0]
     strong_voice['paths'] = [row['path'] for row in user_audio['heavy']]
+    strong_voice['gain_db_by_path'] = {row['path']: row['playback_gain_db'] for row in user_audio['heavy']}
     strong_voice['exclusive_heavy'] = True
     for performance in performances.values():
         performance['repeat'] = True

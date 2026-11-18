@@ -181,6 +181,14 @@ func set_light_enabled(enabled: bool) -> void:
 	battle_audio.set_light_enabled(enabled)
 
 
+var shooting_impact_boost := false
+
+
+func set_clip_mix(volume: float, impact_boost: bool) -> void:
+	battle_audio.set_clip_volume(volume)
+	shooting_impact_boost = impact_boost
+
+
 func play_melody(kind: String) -> bool:
 	if not battle_audio.play_melody(kind):
 		return false
@@ -244,7 +252,10 @@ func confirm_hit(trigger: String, target: Node2D, center: Vector2, layer: Node =
 	if trigger == "shootBow":
 		if play_sound:
 			_apply_audio()
-			actor._play_cue(effect.profile.hit_audio)
+			var cue: Dictionary = effect.profile.hit_audio
+			if not shooting_impact_boost:
+				cue = cue.merged({"volume": 1.0}, true)
+			actor._play_cue(cue)
 		if hurt and is_instance_valid(body):
 			_flash_target(body)
 	effect.z_index = 10
