@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "melody_wah_001",
+      "role": "melody_wah",
+      "original_filename": "1.wav",
+      "path": "三旋律/哇/1.wav",
+      "duration_seconds": 0.906349,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "5e364b8217deea49526f1b32c2804683f08717f9c3ce7ac45ab528b07a74a388",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.306063,
+        0.324365
+      ],
+      "source_id": "ievan_polkka"
+    },
+    {
+      "id": "melody_cho_001",
+      "role": "melody_cho",
+      "original_filename": "2.wav",
+      "path": "三旋律/啾/2.wav",
+      "duration_seconds": 1.018707,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "d76a8150b94d5994796f46a47e895c455a781c6fc9d4ef16d258787aed21bd97",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.341,
+        0.350567
+      ],
+      "source_id": "world_is_mine"
+    },
+    {
+      "id": "melody_ki_001",
+      "role": "melody_ki",
+      "original_filename": "3.wav",
+      "path": "三旋律/叽/3.wav",
+      "duration_seconds": 2.011224,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "c2fa2813c7363aecff12a8cda59e5b2ad02c5112b9cd78b62c3276817654c3d9",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.354607,
+        0.368126
+      ],
+      "source_id": "mikumiku_ni_shite_ageru"
+    },
+    {
+      "id": "heavy_mikumiku_001",
+      "role": "heavy_candidate",
+      "original_filename": "mikumiku.wav",
+      "path": "重击候选/mikumiku.wav",
+      "duration_seconds": 4.049206,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "b992ba89da79738d163c4fe4504514681d4bdda77c2532e9fabe134d87b684c2",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.266758,
+        0.287347
+      ],
+      "source_id": "mikumiku_ni_shite_ageru"
+    },
+    {
+      "id": "heavy_world_is_mine_001",
+      "role": "heavy_candidate",
+      "original_filename": "miku_world_is_mine_clip01.wav",
+      "path": "重击候选/miku_world_is_mine_clip01.wav",
+      "duration_seconds": 5.481973,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "48ed1925bcd08c9dc51d6f8cc710f918ce2e09644ed91cc5a020411c667d97c4",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.371863,
+        0.329967
+      ],
+      "source_id": "world_is_mine"
+    },
+    {
+      "id": "bgm_empire_girl_001",
+      "role": "battle_bgm",
+      "original_filename": "初音未来 (初音ミク) _ R Sound Design - 帝国少女_L.ogg",
+      "path": "局内音乐/初音未来 (初音ミク) _ R Sound Design - 帝国少女_L.ogg",
+      "duration_seconds": 255.08678,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "9f6396f255cf104fa80798833e0a93b9ba2a65b734209c1ea411a97b7ea4b64d",
+      "channel_peak": [
+        0.847469,
+        0.904527
+      ],
+      "channel_rms": [
+        0.227563,
+        0.224967
+      ],
+      "source_id": "teikoku_shoujo"
+    },
+    {
+      "id": "light_bakemono_001",
+      "role": "light_attack",
+      "group_id": "bakemono_no_uta_001",
+      "sequence": 1,
+      "source_id": "bakemono_no_uta",
+      "original_filename": "怪物1.wav",
+      "path": "轻攻击分组/怪物之歌/怪物1.wav",
+      "duration_seconds": 2.274467,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "3a7905a8fd51f0de8adc284b22fbcb1719e6acce501d758a3234cdc7154d08a4",
+      "channel_peak": [
+        0.838867,
+        0.871582
+      ],
+      "channel_rms": [
+        0.207306,
+        0.204937
+      ]
+    },
+    {
+      "id": "light_bakemono_002",
+      "role": "light_attack",
+      "group_id": "bakemono_no_uta_001",
+      "sequence": 2,
+      "source_id": "bakemono_no_uta",
+      "original_filename": "怪物2.wav",
+      "path": "轻攻击分组/怪物之歌/怪物2.wav",
+      "duration_seconds": 2.291451,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "9b9398a2aff522c4de74f76d50eafbbe852c27bfd9738f8afb7caae297166d96",
+      "channel_peak": [
+        0.855713,
+        0.907257
+      ],
+      "channel_rms": [
+        0.223144,
+        0.221156
+      ]
+    },
+    {
+      "id": "light_bakemono_003",
+      "role": "light_attack",
+      "group_id": "bakemono_no_uta_001",
+      "sequence": 3,
+      "source_id": "bakemono_no_uta",
+      "original_filename": "怪物3.wav",
+      "path": "轻攻击分组/怪物之歌/怪物3.wav",
+      "duration_seconds": 2.22449,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "4509b375c63bacb3f0a66fdfcb2729c20120cc5a920eba7bd34f866c339b8853",
+      "channel_peak": [
+        0.853882,
+        0.828278
+      ],
+      "channel_rms": [
+        0.208493,
+        0.206282
+      ]
+    },
+    {
+      "id": "light_teikoku_001",
+      "role": "light_attack",
+      "group_id": "teikoku_shoujo_001",
+      "sequence": 1,
+      "source_id": "teikoku_shoujo",
+      "original_filename": "帝国少女1.wav",
+      "path": "轻攻击分组/帝国少女/帝国少女1.wav",
+      "duration_seconds": 2.690703,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "27aefaa20c001577a74ec28ec742a4d86cc94715f7b545d5ec804d9d99c63b51",
+      "channel_peak": [
+        0.527832,
+        0.454529
+      ],
+      "channel_rms": [
+        0.070775,
+        0.074394
+      ]
+    },
+    {
+      "id": "light_teikoku_002",
+      "role": "light_attack",
+      "group_id": "teikoku_shoujo_001",
+      "sequence": 2,
+      "source_id": "teikoku_shoujo",
+      "original_filename": "帝国少女2.wav",
+      "path": "轻攻击分组/帝国少女/帝国少女2.wav",
+      "duration_seconds": 2.648322,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "3d848ee58843fd574c3c550c56015b9bce9600673a53975425d73dc3b2707adb",
+      "channel_peak": [
+        0.56189,
+        0.578827
+      ],
+      "channel_rms": [
+        0.080167,
+        0.085275
+      ]
+    },
+    {
+      "id": "light_teikoku_003",
+      "role": "light_attack",
+      "group_id": "teikoku_shoujo_001",
+      "sequence": 3,
+      "source_id": "teikoku_shoujo",
+      "original_filename": "帝国少女3.wav",
+      "path": "轻攻击分组/帝国少女/帝国少女3.wav",
+      "duration_seconds": 6.08059,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "61a61536bf22c036192bcf1926ff7ee0c47fff1bd4fdecf9619464e415002968",
+      "channel_peak": [
+        0.768219,
+        0.801758
+      ],
+      "channel_rms": [
+        0.208636,
+        0.228568
+      ]
+    },
+    {
+      "id": "light_renai_saiban_001",
+      "role": "light_attack",
+      "group_id": "renai_saiban_001",
+      "sequence": 1,
+      "source_id": "renai_saiban",
+      "original_filename": "恋爱裁判1.wav",
+      "path": "轻攻击分组/恋爱裁判/恋爱裁判1.wav",
+      "duration_seconds": 3.650431,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "c8e042026f595f285a8949dac0e5caf50be91a851e5af6e055ea467e3acd7788",
+      "channel_peak": [
+        0.763885,
+        0.760223
+      ],
+      "channel_rms": [
+        0.128285,
+        0.126291
+      ]
+    },
+    {
+      "id": "light_renai_saiban_002",
+      "role": "light_attack",
+      "group_id": "renai_saiban_001",
+      "sequence": 2,
+      "source_id": "renai_saiban",
+      "original_filename": "恋爱裁判2.wav",
+      "path": "轻攻击分组/恋爱裁判/恋爱裁判2.wav",
+      "duration_seconds": 3.805011,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "14de9d6f3459977b5bbd2bf125e2e9c911b289729902be759ab746f481ed0e94",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.232051,
+        0.236712
+      ]
+    },
+    {
+      "id": "light_renai_saiban_003",
+      "role": "light_attack",
+      "group_id": "renai_saiban_001",
+      "sequence": 3,
+      "source_id": "renai_saiban",
+      "original_filename": "恋爱裁判3.wav",
+      "path": "轻攻击分组/恋爱裁判/恋爱裁判3.wav",
+      "duration_seconds": 3.935805,
+      "sample_rate": 44100,
+      "channels": 2,
+      "sha256": "4ade3efc957c775124fc40eee1802e72a5984fa57f709973cad15639e0c23b99",
+      "channel_peak": [
+        1.0,
+        1.0
+      ],
+      "channel_rms": [
+        0.342178,
+        0.340307
+      ]
+    }
+  ],
+  "sources_document": "../../音频来源与致谢.md"
+}
